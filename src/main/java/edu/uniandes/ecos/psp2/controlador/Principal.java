@@ -72,7 +72,7 @@ public class Principal {
 			"<td>"+datos2.getMedium()+"</td>"+
 			"<td>"+datos2.getLarge()+"</td>"+
 			"<td>"+datos2.getVeryLarge()+"</td>"+
-			"</tr>>/table>"
+			"</tr></table>"
 		);
 	}
 }
