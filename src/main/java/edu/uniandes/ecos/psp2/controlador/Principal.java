@@ -24,7 +24,7 @@ import java.util.Map;
 public class Principal {
 	public static void main(String[] args) {
 	    port(Integer.valueOf(System.getenv("PORT")));
-	    staticFileLocation("/public");
+	    staticFileLocation("/resources");
 	    
 		Scanner in = new Scanner(System.in);
 //		System.out.println("Por favor ingrese la ruta del archivo a analizar");
