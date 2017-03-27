@@ -26,32 +26,32 @@ public class Principal {
 	    port(Integer.valueOf(System.getenv("PORT")));
 	    staticFileLocation("/public");
 	    
-		Scanner in = new Scanner(System.in);
-		String ruta = "test1.txt";
-		Persistencia datos = new Persistencia();
-		Lector lector = new Lector(datos);
-		try {
-			lector.leerArchivo(ruta);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		datos.calcularRangos();
-		//Impresion de resultados
-		Presentacion.mostrarResultados(datos);
+//		Scanner in = new Scanner(System.in);
+//		String ruta = "test1.txt";
+//		Persistencia datos = new Persistencia();
+//		Lector lector = new Lector(datos);
+//		try {
+//			lector.leerArchivo(ruta);
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		}
+//		datos.calcularRangos();
+//		//Impresion de resultados
+//		Presentacion.mostrarResultados(datos);
+//		
+//
+//		String ruta2 = "target/classes/public/test2.txt";
+//		Persistencia datos2 = new Persistencia();
+//		Lector lector2 = new Lector(datos2);
+//		try {
+//			lector2.leerArchivo(ruta2);
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		}
+//		datos.calcularRangos();
+//		//Impresion de resultados
+//		Presentacion.mostrarResultados(datos2);
 		
-
-		String ruta2 = "target/classes/public/test2.txt";
-		Persistencia datos2 = new Persistencia();
-		Lector lector2 = new Lector(datos2);
-		try {
-			lector2.leerArchivo(ruta2);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		datos.calcularRangos();
-		//Impresion de resultados
-		Presentacion.mostrarResultados(datos2);
-		
-		get("/", (req, res) -> datos.getVerySmall());
+		get("/", (req, res) -> "TEST");
 	}
 }
