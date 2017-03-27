@@ -29,7 +29,7 @@ public class Principal {
 		Scanner in = new Scanner(System.in);
 //		System.out.println("Por favor ingrese la ruta del archivo a analizar");
 //		String ruta = in.nextLine();
-		String ruta = "text1.txt";
+		String ruta = "target/classes/resources/text1.txt";
 		Persistencia datos = new Persistencia();
 		Lector lector = new Lector(datos);
 		try {
@@ -42,7 +42,7 @@ public class Principal {
 		Presentacion.mostrarResultados(datos);
 		
 
-		String ruta2 = "target/classes/resources/text1.txt";
+		String ruta2 = "target/classes/resources/text2.txt";
 		Persistencia datos2 = new Persistencia();
 		Lector lector2 = new Lector(datos2);
 		try {
