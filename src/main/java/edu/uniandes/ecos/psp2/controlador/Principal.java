@@ -40,5 +40,7 @@ public class Principal {
 		datos.calcularRangos();
 		//Impresion de resultados
 		Presentacion.mostrarResultados(datos);
+		
+		get("/", (req, res) -> datos.getVerySmall());
 	}
 }
