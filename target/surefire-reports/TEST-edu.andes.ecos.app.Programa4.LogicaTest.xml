@@ -44,7 +44,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_121\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="es"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -63,9 +63,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testLogaritmo" time="0.006"/>
+  <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testLogaritmo" time="0.005"/>
+  <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testVarianza" time="0.001"/>
   <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testPromedio" time="0.001"/>
-  <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testVarianza" time="0"/>
   <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testDesviacionEstandar" time="0"/>
   <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testCalcularLOCMetodos" time="0.001"/>
 </testsuite>
