@@ -27,18 +27,18 @@ public class Principal {
 	    staticFileLocation("/public");
 	    
 		Scanner in = new Scanner(System.in);
-//		String ruta = "test1.txt";
-//		Persistencia datos = new Persistencia();
-//		Lector lector = new Lector(datos);
-//		try {
-//			lector.leerArchivo(ruta);
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		}
-//		datos.calcularRangos();
-//		//Impresion de resultados
-//		Presentacion.mostrarResultados(datos);
-//		
+		String ruta = "target/classes/public/test1.txt";
+		Persistencia datos = new Persistencia();
+		Lector lector = new Lector(datos);
+		try {
+			lector.leerArchivo(ruta);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		datos.calcularRangos();
+		//Impresion de resultados
+		Presentacion.mostrarResultados(datos);
+		
 
 		String ruta2 = "target/classes/public/test2.txt";
 		Persistencia datos2 = new Persistencia();
@@ -52,6 +52,27 @@ public class Principal {
 		//Impresion de resultados
 		Presentacion.mostrarResultados(datos2);
 		
-		get("/", (req, res) -> datos2.getVerySmall());
+		get("/", (req, res) -> 
+			"<h2>Expected Values</h2>"+
+			"<table border='1'><th></th>"+
+			"<th>VS</th>"+
+			"<th>S</th>"+
+			"<th>M</th>"+
+			"<th>L</th>"+
+			"<th>VL</th>"+
+			"<tr><td>LOC/Method</td>"+
+			"<td>"+datos.getVerySmall()+"</td>"+
+			"<td>"+datos.getSmall()+"</td>"+
+			"<td>"+datos.getMedium()+"</td>"+
+			"<td>"+datos.getLarge()+"</td>"+
+			"<td>"+datos.getVeryLarge()+"</td>"+
+			"</tr><tr><td>Pgs/Chapter</td>"+
+			"<td>"+datos2.getVerySmall()+"</td>"+
+			"<td>"+datos2.getSmall()+"</td>"+
+			"<td>"+datos2.getMedium()+"</td>"+
+			"<td>"+datos2.getLarge()+"</td>"+
+			"<td>"+datos2.getVeryLarge()+"</td>"+
+			"</tr>>/table>"
+		);
 	}
 }
