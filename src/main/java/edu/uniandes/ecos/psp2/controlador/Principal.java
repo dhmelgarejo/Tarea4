@@ -24,7 +24,7 @@ import java.util.Map;
 public class Principal {
 	public static void main(String[] args) {
 	    port(Integer.valueOf(System.getenv("PORT")));
-	    staticFileLocation("resources/");
+	    staticFileLocation("/public");
 	    
 		Scanner in = new Scanner(System.in);
 //		System.out.println("Por favor ingrese la ruta del archivo a analizar");
@@ -42,7 +42,7 @@ public class Principal {
 		Presentacion.mostrarResultados(datos);
 		
 
-		String ruta2 = "target/classes/resources/test2.txt";
+		String ruta2 = "target/classes/public/test2.txt";
 		Persistencia datos2 = new Persistencia();
 		Lector lector2 = new Lector(datos2);
 		try {
