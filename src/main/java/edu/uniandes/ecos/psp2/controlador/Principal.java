@@ -5,6 +5,16 @@ import java.util.Scanner;
 
 import edu.uniandes.ecos.psp2.modelo.Persistencia;
 import edu.uniandes.ecos.psp2.vista.Presentacion;
+
+import spark.ModelAndView;
+import spark.template.freemarker.FreeMarkerEngine;
+import static spark.Spark.*;
+
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Map;
+
+
 /**
 	* Programa 4 desarrollado para calcular rangos de tamaño de un programa
 	* ECOS Primer Semestre de 2017
@@ -13,9 +23,13 @@ import edu.uniandes.ecos.psp2.vista.Presentacion;
 **/
 public class Principal {
 	public static void main(String[] args) {
+	    port(Integer.valueOf(System.getenv("PORT")));
+	    staticFileLocation("/public");
+	    
 		Scanner in = new Scanner(System.in);
-		System.out.println("Por favor ingrese la ruta del archivo a analizar");
-		String ruta = in.nextLine();
+//		System.out.println("Por favor ingrese la ruta del archivo a analizar");
+//		String ruta = in.nextLine();
+		String ruta = "Test 1.txt";
 		Persistencia datos = new Persistencia();
 		Lector lector = new Lector(datos);
 		try {
