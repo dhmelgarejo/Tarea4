@@ -40,7 +40,7 @@ public class Principal {
 		Presentacion.mostrarResultados(datos);
 		
 
-		String ruta2 = "target/classes/resources/public/test2.txt";
+		String ruta2 = "target/classes/public/test2.txt";
 		Persistencia datos2 = new Persistencia();
 		Lector lector2 = new Lector(datos2);
 		try {
