@@ -63,9 +63,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testPromedio" time="0.006"/>
-  <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testLogaritmo" time="0"/>
-  <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testVarianza" time="0"/>
+  <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testCalcularLOCMetodos" time="0.005"/>
   <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testDesviacionEstandar" time="0"/>
-  <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testCalcularLOCMetodos" time="0"/>
+  <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testLogaritmo" time="0"/>
+  <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testVarianza" time="0.001"/>
+  <testcase classname="edu.andes.ecos.app.Programa4.LogicaTest" name="testPromedio" time="0"/>
 </testsuite>

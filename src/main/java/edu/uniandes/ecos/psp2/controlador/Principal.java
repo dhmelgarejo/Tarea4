@@ -27,18 +27,18 @@ public class Principal {
 	    staticFileLocation("/public");
 	    
 		Scanner in = new Scanner(System.in);
-		String ruta = "test1.txt";
-		Persistencia datos = new Persistencia();
-		Lector lector = new Lector(datos);
-		try {
-			lector.leerArchivo(ruta);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		datos.calcularRangos();
-		//Impresion de resultados
-		Presentacion.mostrarResultados(datos);
-		
+//		String ruta = "test1.txt";
+//		Persistencia datos = new Persistencia();
+//		Lector lector = new Lector(datos);
+//		try {
+//			lector.leerArchivo(ruta);
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		}
+//		datos.calcularRangos();
+//		//Impresion de resultados
+//		Presentacion.mostrarResultados(datos);
+//		
 
 		String ruta2 = "target/classes/public/test2.txt";
 		Persistencia datos2 = new Persistencia();
@@ -48,10 +48,10 @@ public class Principal {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		datos.calcularRangos();
+		datos2.calcularRangos();
 		//Impresion de resultados
 		Presentacion.mostrarResultados(datos2);
 		
-		get("/", (req, res) -> datos.getVerySmall());
+		get("/", (req, res) -> datos2.getVerySmall());
 	}
 }
