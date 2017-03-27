@@ -24,12 +24,12 @@ import java.util.Map;
 public class Principal {
 	public static void main(String[] args) {
 	    port(Integer.valueOf(System.getenv("PORT")));
-	    staticFileLocation("resources/");
+	    staticFileLocation("/resources");
 	    
 		Scanner in = new Scanner(System.in);
 //		System.out.println("Por favor ingrese la ruta del archivo a analizar");
 //		String ruta = in.nextLine();
-		String ruta = "Test 1.txt";
+		String ruta = "text1.txt";
 		Persistencia datos = new Persistencia();
 		Lector lector = new Lector(datos);
 		try {
@@ -40,6 +40,19 @@ public class Principal {
 		datos.calcularRangos();
 		//Impresion de resultados
 		Presentacion.mostrarResultados(datos);
+		
+
+		String ruta2 = "target/classes/resources/text1.txt";
+		Persistencia datos2 = new Persistencia();
+		Lector lector2 = new Lector(datos2);
+		try {
+			lector2.leerArchivo(ruta2);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		datos.calcularRangos();
+		//Impresion de resultados
+		Presentacion.mostrarResultados(datos2);
 		
 		get("/", (req, res) -> datos.getVerySmall());
 	}
