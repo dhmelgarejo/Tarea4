@@ -27,8 +27,6 @@ public class Principal {
 	    staticFileLocation("/public");
 	    
 		Scanner in = new Scanner(System.in);
-//		System.out.println("Por favor ingrese la ruta del archivo a analizar");
-//		String ruta = in.nextLine();
 		String ruta = "test1.txt";
 		Persistencia datos = new Persistencia();
 		Lector lector = new Lector(datos);
